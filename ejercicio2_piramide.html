@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="js/jquery/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery/jquery-ui-1.8.17.custom.min.js"></script>
+	<script type="text/javascript" src="jspdf.js"></script>
+
+	<script type="text/javascript" src="jspdf.plugin.addimage.js"></script>
+
+	<script type="text/javascript" src="jspdf.plugin.standard_fonts_metrics.js"></script>
+	<script type="text/javascript" src="jspdf.plugin.split_text_to_size.js"></script>
+	<script type="text/javascript" src="jspdf.plugin.from_html.js"></script>
+    <title>Document</title>
+</head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pyramid</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <iframe id="pdfFrame" frameborder="0" width="500" height="400"></iframe>
+    <script>
+        var name = prompt('Enter a char: ');
+        var multiplier = prompt('Enter a number:');
+
+        multiplier = parseInt(multiplier);
+
+        var doc = new jsPDF();
+        doc.setFontSize(22);
+
+        // Calculamos el ancho total de la piramide
+        var pyramidWidth = multiplier * 20;
+        // Centrar la pirámide en el documento
+        var startX = (doc.internal.pageSize.width - pyramidWidth) / 2;
+        /*
+        -> doc.internal.pageSize-witdh: Calcula el espacio del ancho de la página del PDF en píxeles (en jsPDF).
+
+        -> pyramidWidth: Esto es el ancho total de la pirámide, calculado multiplicando el número ingresado por el usuario  por 20. 
+        Cada "unidad" en este caso es de 20 píxeles, que es el espacio horizontal que ocupa cada carácter en la pirámide.
+
+        ->(doc.internal.pageSize.width - pyramidWidth): Resta el ancho total de la pirámide del ancho total de la página del documento. 
+        Esto nos da la cantidad de espacio disponible en los bordes izquierdo y derecho del documento.
+
+        ->(doc.internal.pageSize.width - pyramidWidth) / 2: Divide la cantidad de espacio disponible por 2 para obtener la cantidad de espacio disponible a cada lado 
+        de la pirámide. Esto es necesario para centrar la pirámide en el documento, ya que queremos que haya la misma cantidad de espacio en los bordes izquierdo y derecho.
+
+        Entonces, básicamente, esta línea de código calcula cuánto espacio hay en los bordes izquierdo y derecho del documento después de restar el ancho total de 
+        la pirámide, y luego divide esta cantidad por 2 para obtener la cantidad de espacio que se necesita para centrar la pirámide.*/
+
+        for (var i = 1; i <= multiplier; i++) {
+            // Calcular el espacio en blanco a cada lado de la fila para centrar los caracteres
+            var spaces = multiplier - i;
+            // Calcular la posición inicial de la fila
+            var rowStartX = startX + (spaces * 10);
+            /*
+            var rowStartX = startX + (spaces * 10);: En esta línea, startX representa la posición inicial horizontal de la pirámide en el documento, que ya hemos calculado 
+            previamente para centrar la pirámide. spaces es el número de espacios en blanco que necesitamos colocar a cada lado de la fila para centrar los caracteres.
+
+            spaces * 10: Multiplicamos el número de espacios por 10, ya que cada espacio tiene una anchura de 10 píxeles. Esto nos da la cantidad total de 
+            espacio que necesitamos agregar a la izquierda de la fila para centrarla.
+
+            startX + (spaces * 10): Sumamos este espacio calculado a startX para obtener la posición inicial horizontal de la fila. Esto asegura que cada 
+            fila se inicie en la posición correcta para estar centrada dentro de la pirámide.
+*/
+            for (var j = 1; j <= i * 2 - 1; j++) {
+                // Calcular la posición de cada caracter
+                var charX = startX + ((j - 1) * 10);
+                doc.text(charX, 30 + (i * 10), name);
+            }
+        }
+
+        var string = doc.output('datauristring');
+
+        $('#pdfFrame').attr('src', string);
+    </script>
+</body>
+</html>
+
+

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Menu</title>
+    <style>
+        h1{
+            color: #227;
+            font-family: Arial;
+            font-size: 50px;
+            letter-spacing: 2px;
+            text-align: center;
+            text-shadow: 2px 2px 2px rgb(97, 97, 143);
+        }
+        .contain{
+            background-image: linear-gradient(to bottom, rgb(218, 215, 255), #f3f1ff);
+            margin-top: 0px;
+            padding: 5px;
+        }
+        body{
+            margin: 0px;
+        }
+       .menu{
+        box-sizing: border-box;
+        background-color: rgb(36, 36, 85);
+        position: relative;
+       }
+        h3{
+            color: rgb(58, 58, 77);
+            font-family: Arial;
+            font-size: 20px;
+            letter-spacing: 2px;
+            text-align: center;
+            padding: 5px;
+        }
+        button{
+            margin: 10px;
+           background-color:rgb(196, 191, 218) ;
+           border: none;
+           padding: 10px;
+           box-shadow: 3px 3px 2px rgba(135, 140, 167, 0.966);
+           border-radius: 10px ;
+           font-family: Arial, Helvetica, sans-serif;
+           font-weight: bold;
+        }
+        button:hover{
+            background-color:rgb(242, 240, 255) ;
+            color: rgb(24, 23, 82);
+            box-shadow: 3px 3px 2px rgba(226, 226, 226, 0.829);
+            width: 120px;
+        }
+        .buttont{
+            margin: 10px;
+           background-color:rgb(218, 191, 214) ;
+           border: none;
+           padding: 10px;
+           box-shadow: 3px 3px 2px rgba(167, 135, 159, 0.966);
+           border-radius: 10px ;
+           font-family: Arial, Helvetica, sans-serif;
+           font-weight: bold;
+        }
+        .buttonth{
+            margin: 10px;
+            background-color:rgb(174, 197, 228) ;
+           border: none;
+           padding: 10px;
+           box-shadow: 3px 3px 2px rgba(136, 139, 143, 0.966);
+           border-radius: 10px;
+           font-family: Arial, Helvetica, sans-serif;
+           font-weight: bold;
+        }
+        .buttont:hover{
+            background-color:rgb(254, 233, 255) ;
+            color: rgb(70, 23, 82);
+            box-shadow: 3px 3px 2px rgba(226, 226, 226, 0.829);
+            width: 120px;
+        }
+        .buttonth:hover{
+            background-color:rgb(223, 231, 241) ;
+            color: rgb(25, 35, 82);
+            box-shadow: 3px 3px 2px rgba(226, 226, 226, 0.829);
+            width: 120px;
+        }
+        a{
+            margin-top: -37px;
+            position: absolute;
+            font-family: monospace;
+            color: rgb(46, 46, 53);
+            font-size: large;
+            text-decoration: none;
+            font-weight: bold;
+            background-color: rgb(189, 183, 230);
+            padding: 10px;
+            display: block; 
+            width: 100%;
+            box-shadow: 5px 5px 5px  #666666c7;
+
+        }
+        .at{
+            background-color:rgb(218, 191, 214) ;
+        }
+        a:hover{
+            color: rgb(1, 0, 3);
+        }
+        .links{
+            margin-top: 4vh;
+            text-align: center;
+        }
+        iframe{
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="contain">
+    <h1>Menú</h1>
+    <h3>Prácticas de Javascript</h3>
+</div>
+    <div class="menu">
+    <center>
+    <button onclick="ejercicio1()">Ejercicio 1</button>
+    <button onclick="ejercicio2()">Ejercicio 2</button>
+    <button onclick="ejercicio3()">Ejercicio 3</button>
+    <button onclick="ejercicio4()">Ejercicio 4</button>
+    <button onclick="ejercicio5()">Ejercicio 5</button>
+    <button onclick="ejercicio6()">Ejercicio 6</button>
+    <button onclick="ejercicio7()">Ejercicio 7</button>
+    <button onclick="ejercicio8()">Ejercicio 8</button>
+    <button class="buttont" onclick="ejercicio9()">Ejercicio 9</button>
+    <button class="buttont" onclick="ejercicio10()">Ejercicio 10</button>
+    <button class="buttont" onclick="ejercicio11()">Ejercicio 11</button>
+    <button class="buttont" onclick="ejercicio12()">Ejercicio 12</button>
+    <button class="buttont" onclick="ejercicio13()">Ejercicio 13</button>
+    <button class="buttont" onclick="ejercicio14()">Ejercicio 14</button>
+    <button class="buttont" onclick="ejercicio15()">Ejercicio 15</button>
+    <button class="buttont" onclick="ejercicio16()">Ejercicio 16</button>
+    <button class="buttont" onclick="ejercicio17()">Ejercicio 17</button>
+    <button class="buttonth" onclick="ejercicio18()">Ejercicio 18</button>
+    <button class="buttonth" onclick="ejercicio19()">Ejercicio 19</button>
+    <button class="buttonth" onclick="ejercicio19()">Ejercicio 20</button>
+    </center>
+    </div>
+    <p id="demo"></p>
+    <script>
+        function ejercicio1(){
+            document.getElementById("demo").innerHTML="<div class='links'><a href='https://portfafoliowebinagm.000webhostapp.com/ejercicio1js.html'>Ejercicio 1</a><iframe width='500vw' height='400vh' src='https://portfafoliowebinagm.000webhostapp.com/ejercicio1js.html'></div>";
+        }
+        function ejercicio2(){
+            document.getElementById("demo").innerHTML="<div class='links'><a href='https://portfafoliowebinagm.000webhostapp.com/tabla.html'>Ejercicio 2</a><iframe width='500vw' height='400vh' src='https://portfafoliowebinagm.000webhostapp.com/tabla.html'></div>";
+        }
+        function ejercicio3(){
+            document.getElementById("demo").innerHTML="<div class='links'><a href='https://portfafoliowebinagm.000webhostapp.com/ejercicio3a.html'>Ejercicio 3</a><iframe width='500vw' height='400vh' src='https://portfafoliowebinagm.000webhostapp.com/ejercicio3a.html'></div>";
+        }
+        function ejercicio4(){
+            document.getElementById("demo").innerHTML="<div class='links'><a href='https://portfafoliowebinagm.000webhostapp.com/ejercicio3b.html'>Ejercicio 4</a><iframe width='500vw' height='400vh' src='https://portfafoliowebinagm.000webhostapp.com/ejercicio3b.html'></div>";
+        }
+        function ejercicio5(){
+            document.getElementById("demo").innerHTML="<div class='links'><a href='https://portfafoliowebinagm.000webhostapp.com/login.html'>Ejercicio 5</a><iframe width='500vw' height='400vh' src='https://portfafoliowebinagm.000webhostapp.com/login.html'></div>";
+        }
+        function ejercicio6(){
+            document.getElementById("demo").innerHTML="<div class='links'><a href='https://portfafoliowebinagm.000webhostapp.com/reto1_tablanum_aleatorios.html'>Ejercicio 6</a><iframe width='500vw' height='400vh' src='https://portfafoliowebinagm.000webhostapp.com/reto1_tablanum_aleatorios.html'></div>";
+        }
+        function ejercicio7(){
+            document.getElementById("demo").innerHTML="<div class='links'><a href='https://portfafoliowebinagm.000webhostapp.com/reto2_conversor.html'>Ejercicio 7</a><iframe width='500vw' height='400vh' src='https://portfafoliowebinagm.000webhostapp.com/reto2_conversor.html'></div>";
+        }
+        function ejercicio8(){
+            document.getElementById("demo").innerHTML="<div class='links'><a href='https://portfafoliowebinagm.000webhostapp.com/arreglos1.html'>Ejercicio 8</a><iframe width='500vw' height='400vh' src='https://portfafoliowebinagm.000webhostapp.com/arreglos1.html'></div>";
+        }
+        function ejercicio9(){
+            document.getElementById("demo").innerHTML="<div class='links'><a class='at' href='https://portfafoliowebinagm.000webhostapp.com/ejercicio_geolocalizacion.html'>Ejercicio 9</a><iframe width='500vw' height='400vh' src='https://portfafoliowebinagm.000webhostapp.com/ejercicio_geolocalizacion.html'></div>";
+        }
+        function ejercicio10(){
+            document.getElementById("demo").innerHTML="<div class='links'><a class='at' href='https://portfafoliowebinagm.000webhostapp.com/ejercicio13.html'>Ejercicio 10</a><iframe width='500vw' height='400vh' src='https://portfafoliowebinagm.000webhostapp.com/ejercicio13.html'></div>";
+        }
+        function ejercicio11(){
+            document.getElementById("demo").innerHTML="<div class='links'><a class='at' href='https://portfafoliowebinagm.000webhostapp.com/ejercicio_geolocalizacion2.html'>Ejercicio 11</a><iframe width='500vw' height='400vh' src='https://portfafoliowebinagm.000webhostapp.com/ejercicio_geolocalizacion2.html'></div>";
+        }
+        function ejercicio12(){
+            document.getElementById("demo").innerHTML="<div class='links'><a class='at' href='https://portfafoliowebinagm.000webhostapp.com/api_graficas.html'>Ejercicio 12</a><iframe width='500vw' height='400vh' src='https://portfafoliowebinagm.000webhostapp.com/api_graficas.html'></div>";
+        }
+        function ejercicio13(){
+            document.getElementById("demo").innerHTML="<div class='links'><a class='at' href='https://portfafoliowebinagm.000webhostapp.com/ejercicio16.html'>Ejercicio 13</a><iframe width='500vw' height='400vh' src='https://portfafoliowebinagm.000webhostapp.com/ejercicio16.html'></div>";
+        }
+        function ejercicio14(){
+            document.getElementById("demo").innerHTML="<div class='links'><a class='at' href='https://portfafoliowebinagm.000webhostapp.com/ejercicio15.html'>Ejercicio 14</a><iframe width='500vw' height='400vh' src='https://portfafoliowebinagm.000webhostapp.com/ejercicio15.html'></div>";
+        }
+        function ejercicio15(){
+            document.getElementById("demo").innerHTML="<div class='links'><a class='at' href='https://portfafoliowebinagm.000webhostapp.com/canvas.html'>Ejercicio 15</a><iframe width='500vw' height='400vh' src='https://portfafoliowebinagm.000webhostapp.com/canvas.html'></div>";
+        }
+        function ejercicio16(){
+            document.getElementById("demo").innerHTML="<div class='links'><a class='at' href='https://portfafoliowebinagm.000webhostapp.com/reto1_grafica.html'>Ejercicio 16</a><iframe width='500vw' height='400vh' src='https://portfafoliowebinagm.000webhostapp.com/reto1_grafica.html'></div>";
+        }
+        function ejercicio17(){
+            document.getElementById("demo").innerHTML="<div class='links'><a class='at' href='https://portfafoliowebinagm.000webhostapp.com/reto2_grafica.html'>Ejercicio 17</a><iframe width='500vw' height='400vh' src='https://portfafoliowebinagm.000webhostapp.com/reto2_grafica.html'></div>";
+        }
+        function ejercicio18(){
+            document.getElementById("demo").innerHTML="<div class='links'><a class='at' href='https://portfafoliowebinagm.000webhostapp.com/ahorcado_juego.html'>Ejercicio 18</a><iframe width='500vw' height='400vh' src='https://portfafoliowebinagm.000webhostapp.com/ahorcado_juego.html'></div>";
+        }
+        function ejercicio19(){
+            document.getElementById("demo").innerHTML="<div class='links'><a class='at' href='https://portfafoliowebinagm.000webhostapp.com/testalumno.html'>Ejercicio 19</a><iframe width='500vw' height='400vh' src='https://portfafoliowebinagm.000webhostapp.com/testalumno.html'></div>";
+        }
+        function ejercicio20(){
+            document.getElementById("demo").innerHTML="<div class='links'><a class='at' href='jspdf.html'>Ejercicio 20</a><iframe width='500vw' height='400vh' src=''jspdf.html''></div>";
+        }
+        
+    </script>
+</body>
+</html>
